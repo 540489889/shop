@@ -1,0 +1,13 @@
+.el-pagination button:disabled,.el-dialog, .el-pager li,.btn-next,.btn-prev{
+  background:transparent !important;
+}
+.el-pagination{
+  text-align: center;
+  margin: 10px auto;
+}
+.el-pager li{
+  font-size:14px !important;
+}
+.el-pager li.active{
+  color:red;
+}

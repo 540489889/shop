@@ -1,0 +1,48 @@
+.el-message-box{
+  width:6.5rem !important;
+  min-height:7rem !important;
+}
+.el-message-box__title{
+  text-align: center !important;
+}
+/*.el-radio__input.is-checked+.el-radio__label{*/
+  /*color:#F96368;*/
+/*}*/
+/*.el-radio__input.is-checked .el-radio__inner{*/
+  /*border-color: #F96368;*/
+  /*background: #F96368;*/
+  /*border:none;*/
+  /*box-shadow:none;*/
+  /*cursor:none;*/
+  /*position:relative;*/
+/*}*/
+.el-radio:active{
+  /*display: none;*/
+  /*opacity: 0;*/
+  /*box-shadow: none;*/
+  /*border:none;*/
+}
+/*.el-radio__inner::after{*/
+  /*opacity: 0;*/
+  /*box-shadow:none;*/
+/*}*/
+/*.el-radio__inner:hover,.el-radio__inner:focus,.el-radio__inner:active{*/
+  /*border:none;*/
+  /*box-shadow: none;*/
+  /*opacity: 0;*/
+  /*transform: none;*/
+/*}*/
+/*.el-radio__input{*/
+  /*border:none;*/
+  /*box-shadow: none;*/
+  /*transform: none;*/
+/*}*/
+.el-message-box .el-icon-close {
+   position: initial;
+   border-radius: initial;
+   bottom: initial;
+   left: initial;
+   padding: initial;
+   font-size: initial;
+   background-color:initial;
+}

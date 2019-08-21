@@ -1,0 +1,23 @@
+.el-radio-button__inner{
+  line-height:1.8 !important;
+  white-space: initial !important;
+  border:none !important;
+  text-align: left !important;
+  display: block !important;
+  padding-left:40px !important;
+}
+.el-popover, .el-radio-button:first-child:last-child .el-radio-button__inner{
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.el-radio-group{
+  display: block !important;
+  width:100% !important;
+}
+.is-active em{
+  color:white !important;
+  background-color:#fe614a !important;
+}
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled){
+  box-shadow: none !important;
+}

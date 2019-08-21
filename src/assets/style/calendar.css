@@ -1,0 +1,138 @@
+.div_calendar {
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+/** 日历标题 */
+.div_calendar_title {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/** 日历主体 */
+.div_calendar_body {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding:0 10px;
+}
+.div_calendar_body>div:first-child{
+  color:#b3b3b3;
+  font-size:12px;
+}
+.Arrow{
+  font-size:20px;
+  color:#ccc;
+}
+.arrowActive{
+  color:#13b2ef;
+}
+/** 日元素 */
+.div_calendar span {
+  width: 10.8%;
+  display: inline-block;
+  text-align: center;
+  line-height: 38px;
+  margin-right:4%;
+  border-radius: 50%;
+}
+.first_div span:last-child{
+  margin:0;
+}
+.last_div{
+  margin-top:10px;
+}
+.div_calendar span:nth-child(7n){
+  margin-right:0;
+}
+/** 没有记录 */
+.div_calendar span.no {
+  color: #cbcbcb;
+}
+
+/** 正常 */
+.div_calendar span. {
+  color: #8ecda9;
+}
+
+/** 缺勤 */
+.div_calendar span.normal {
+  color: #8ecda9;
+}
+
+/** 缺勤 */
+.div_calendar span.absense {
+  /*color: #bfbfbf;*/
+  border-radius: 50%;
+  background: #11b1ee !important;
+  color:white;
+}
+
+/** 当前日期 */
+.div_calendar span.today {
+  border-radius: 50%;
+  background: #8ecda9;
+  color:white;
+}
+
+/** 选中 */
+.div_calendar span.select {
+  background: #64D3FC;
+  /*border-radius: 50%;*/
+  /*background: #11b1ee;*/
+}
+
+/** 日历第一行日期 */
+.div_calendar .first_div {
+  text-align: right;
+}
+
+/** 日历末行日期 */
+.div_calendar .last_div {
+  text-align: left;
+}
+
+/** 日期显示div */
+.div_calendar .div_currentDate {
+  text-align: right;
+}
+
+.div_calendar .changeDate {
+  cursor: pointer;
+}
+
+.div_calendar .div_currentDate span {
+  width: inherit;
+}
+
+.div_calendar .div_currentDate span em {
+  margin: 5px;
+}
+
+.div_target_label {
+  text-align: center;
+  font-size:18px;
+  font-weight: bold;
+  color:#506187;
+}
+
+.div_changeMonth {
+  margin: auto auto;
+  text-align: center;
+  justify-content: center;
+  padding:15px 0;
+}
+
+.div_changeMonth span {
+  cursor: pointer;
+  margin-right:20px;
+}
+
+.div_changeMonth span:last-child {
+  margin-left: 20px;
+}

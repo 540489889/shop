@@ -1,0 +1,8 @@
+.div_calendar span.select{
+  border-radius: 50%;
+  /*background: #11b1ee;*/
+  color:white;
+}
+.activeIndex .div_calendar span.select, .activeIndex .div_calendar span.today{
+  background-color:#64D3FC !important;
+}

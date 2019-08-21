@@ -1,0 +1,41 @@
+.alert-infor-p{
+  color:#506187;
+  font-size:15px;
+  margin:15px 0 0 0!important;
+}
+.el-message-box__btns{
+  text-align: center;
+}
+.el-button--small, .el-button--small.is-round{
+  display: inline-block;
+  width:2.1rem;
+  height:0.7rem;
+  border-radius: 0.4rem;
+  background: -webkit-linear-gradient(left, #3cc6fb , #12b1ee); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #3cc6fb , #12b1ee); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #3cc6fb , #12b1ee); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #3cc6fb , #12b1ee); /* 标准的语法 */
+  color:white;
+  margin-top:15px;
+}
+.alert-r-a{
+
+}
+.el-message-box{
+  width:4.9rem;
+  height:4.2rem;
+  overflow: initial;
+}
+.el-icon-success{
+  font-size:40px;
+  color:#33cc00;
+}
+.el-icon-close{
+  position:absolute;
+  border-radius: 50%;
+  bottom:-5rem;
+  left:-2.55rem;
+  padding:0.1rem;
+  font-size:30px;
+  background-color:white;
+}

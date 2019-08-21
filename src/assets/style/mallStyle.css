@@ -1,0 +1,95 @@
+/*.el-tabs__nav{*/
+  /*margin-left:15px;*/
+/*}*/
+.swiper-slide{
+  width:100% !important;
+}
+.swiper-img{
+  width:100%
+}
+.mallDetails .el-input__inner{
+  border:none;
+}
+.mallDetails .el-input-number__decrease,.el-input-number__increase{
+  border:none;
+}
+.el-input--suffix .el-input__inner{
+  padding-left:0;
+}
+.mallDetails .el-radio-group{
+  display: inline-block !important;
+  width: initial !important;
+}
+.mallIndex .el-tabs__nav{
+  float:initial;
+  width:100%;
+}
+.mallIndex .el-tabs__item{
+  width:33%;
+  text-align: center;
+  padding:0;
+  color:#929ab0;
+  font-weight: bold;
+  height:45px;
+  line-height:45px;
+}
+.mallIndex .is-active{
+  position:relative !important;
+  color:#506187 !important;
+}
+.mallIndex .el-tabs__item.is-active::before{
+  position:absolute;
+  left:50%;
+  bottom:1px;
+  transform: translateX(-50%);
+  content: "";
+  display: inline-block;
+  width:18px;
+  height:4px;
+  background: -webkit-linear-gradient(left, #3cc6fb , #12b2ee); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #3cc6fb , #12b2ee); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #3cc6fb , #12b2ee); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #3cc6fb , #12b2ee); /* 标准的语法 */
+  border-radius: 2px;
+}
+.mallIndex .el-tabs__nav-wrap::after{
+  z-index: 19;
+  height:1px;
+}
+.mallIndex .el-tabs__active-bar{
+  width:20px !important;
+  border-radius: 2px;
+  height:5px;
+  display: none;
+}
+/*.mallIndex .el-tabs__content ul li:first-child{*/
+  /*padding-top:0;*/
+/*}*/
+.mallIndex .el-tabs__content ul li{
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  width:13px;
+  height:4px;
+  border-radius: 2px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+  background-color:white;
+}
+.el-tabs__header{
+  margin:0;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom:0;
+}
+.swiper-slide img{
+  height:4rem;
+}
+.mallDetails .swiper-slide img{
+  height:4rem;
+}
+.el-tabs__item:hover{
+  color: #506187 !important;
+  cursor: initial;
+}
