@@ -43,18 +43,18 @@
         <!--<p style="padding-bottom:10px;">塞尔维亚引进展“尼古拉·特斯拉——来自未来的人”2018年9月29日起在上海科技馆二楼特展厅展出，为期3个月。展览循着塞尔维亚裔美国籍发明家、机械工程师电气工程师尼古拉·特斯拉独特的人生轨迹与卓越的发明创造之路，从精神、成就...</p>-->
         <div class="content" v-html="info.contents"></div>
       </div>
-
-      <div class="make-c-c flex-box" v-if="eduSeasons.length">
+      <div class="make-c-c flex-box">
         <span>预约场次：</span>
-        <el-select class="box-1" v-model="eduSeasons" @change="selectGet"  placeholder="请选择">
+        <el-select class="box-1" v-model="checkSeasons" @change="selectGet"  placeholder="请选择">
           <!--:label="item.seasonName"-->
           <el-option
-            v-for="item in info.eduSeasons"
+            v-for="item in eduSeasons"
             :key="item.themId"
-            :label="item.seasonName+' '+item.actionStart+' '+item.actionEnd"
+            :label="item.actionStart+' '+item.actionEnd"
             :value="item.seasonName"
           >
-            <span>{{item.seasonName}} {{item.actionStart}} {{item.actionEnd}}</span>
+            <!--<span>{{item.seasonName}} {{item.actionStart}} {{item.actionEnd}}</span>-->
+            <span>{{item.actionStart}} {{item.actionEnd}}</span>
           </el-option>
         </el-select>
       </div>
@@ -156,6 +156,9 @@
         if(!value) {
           return callback(new Error('请输入人数'))
         }
+        else if(value>this.checkPople){
+          return callback(new Error('剩余人数 '+this.checkPople))
+        }
         setTimeout(() => {
           if (!Number.isInteger(value)) {
             callback(new Error('请输入数字值'));
@@ -203,6 +206,8 @@
         themId: null,//场次Id
         fullscreenLoading:false,
         info: {},
+        checkSeasons: '',//场次默认值
+        checkPople:0,//场次人数
         ruleForm2: {
           manNum: '',
           manName: '',
@@ -275,6 +280,17 @@
       },
       //立即预约
       goMake (){
+        if(this.checkSeasons==''){
+          this.$notify({
+            title: '消息',
+            message: '请选择场次',
+            showClose: false,
+            duration: 1000,
+            onClose: function () {
+            }
+          });
+          return false
+        }
         this.dwShow = true
         this.scrollY = false
       },
@@ -347,14 +363,16 @@
         })
       },
       //场次选择
-      selectGet(vId){
-        //这个vId也就是value值
+      selectGet(name){
         let obj = {};
-        obj = this.info.eduSeasons.find((item)=>{
+        obj = this.eduSeasons.find((item)=>{
           //这里的userList就是上面遍历的数据源
-          return item.id === vId;//筛选出匹配数据
+          console.log(item)
+          return item.seasonName === name;//筛选出匹配数据
         });
-        this.themId = obj.id
+//        场次id
+        this.themId = obj.themId
+        this.checkPople = obj.seasonPople
       },
       //获取详情信息
       getDetails(){
@@ -371,9 +389,30 @@
           const data = res.data
           _this.info = data.info
           _this.eduSeasons = data.info.eduSeasons
+//          _this.eduSeasons = [
+//            {actionEnd: "10:57 - 12:58",
+//              actionStart: "2019-08-07",
+//              countPople: 20,
+//              seasonName: "1",
+//              seasonOrder: 1,
+//              seasonPople: 20,
+//              seasonPrice: 0,
+//              signEnd: "10:57 - 20:57",
+//              signStart: "2019-08-06",
+//              themId: "4028d08a6b87acf8016c45c568960622"},
+//            {actionEnd: "10:57 - 11:11",
+//              actionStart: "2019-08-10",
+//              countPople: 30,
+//              seasonName: "5",
+//              seasonOrder: 2,
+//              seasonPople: 22,
+//              seasonPrice: 777,
+//              signEnd: "10:57 - 20:57",
+//              signStart: "2019-08-06",
+//              themId: "4028d08a6b87acf8016c45c568960623"},
+//          ]
           _this.swiperList = data.info.icon
           _this.count = data.count
-          console.log(data)
           _this.fullscreenLoading = false
           _this.comment = data.comment
           _this.comment1 = data.comment1
